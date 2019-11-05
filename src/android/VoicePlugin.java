@@ -38,9 +38,9 @@ public class VoicePlugin extends CordovaPlugin {
     private void sorter(JSONArray args, CallbackContext callbackContext){
         if(args != null){
             try{
-                int passedData = Interger.parseInt.args.getJSONObject(0).getString("param1");
+                int passedData = Integer.parseInt(args.getJSONObject(0).getString("param1"));
                 
-                if(passedData = 1){
+                if(passedData == 1){
                     callbackContext.success("One");
                 }
             }catch(Exception e){
